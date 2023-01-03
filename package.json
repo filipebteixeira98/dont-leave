@@ -1,0 +1,8 @@
+{
+  "name": "dont-leave",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Filipe Teixeira <filipebarrosteixeira98@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
