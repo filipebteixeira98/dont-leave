@@ -10,4 +10,16 @@ describe('DontLeave', () => {
 
     expect(callback).toHaveBeenCalled()
   })
+
+  it('should not run the callback function if the user stills on the screen', () => {
+    const callback = jest.fn()
+    const onLeaveIntent = new DontLeave(callback)
+
+    // simulate the user standing on the screen
+    document.dispatchEvent(
+      new MouseEvent('mouseout', { relatedTarget: new EventTarget() })
+    )
+
+    expect(callback).not.toHaveBeenCalled()
+  })
 })
