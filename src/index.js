@@ -1,12 +1,13 @@
 export default class DontLeave {
-  constructor(callback) {
+  constructor(callback, delay) {
     this.callback = callback
+    this.delay = delay
 
     this.init()
   }
 
   init = () => {
-    this.handleMouseOut()
+    window.setTimeout(this.handleMouseOut, this.delay)
   }
 
   checkOutOfBounds = event => {
