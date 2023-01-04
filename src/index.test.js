@@ -36,4 +36,13 @@ describe('DontLeave', () => {
 
     expect(callback).not.toHaveBeenCalled()
   })
+
+  it('should run the callback function only once', () => {
+    jest.advanceTimersByTime(delay)
+
+    document.dispatchEvent(new MouseEvent('mouseout', { relatedTarget: null }))
+    document.dispatchEvent(new MouseEvent('mouseout', { relatedTarget: null }))
+
+    expect(callback).toHaveBeenCalledTimes(1)
+  })
 })
