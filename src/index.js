@@ -16,7 +16,7 @@ export default class DontLeave {
     }
   }
 
-  handleMouseOut() {
+  handleMouseOut = () => {
     document.addEventListener('mouseout', this.checkOutOfBounds)
   }
 }
