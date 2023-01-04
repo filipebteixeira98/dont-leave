@@ -7,7 +7,8 @@
   "private": false,
   "scripts": {
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",

@@ -18,4 +18,7 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    contentBase: [path.join(__dirname, 'example'), path.join(__dirname, 'lib')],
+  },
 }
