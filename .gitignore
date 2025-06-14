@@ -1,1 +1,5 @@
+# dependencies
+node_modules/
+
+# visual studio code
 .history

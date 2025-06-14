@@ -2,12 +2,14 @@ import DontLeave from './index'
 
 describe('DontLeave', () => {
   let callback, onLeaveIntent
+
   const delay = 1000
 
   jest.useFakeTimers()
 
   beforeEach(() => {
     callback = jest.fn()
+
     onLeaveIntent = new DontLeave(callback, delay)
   })
 
@@ -41,6 +43,7 @@ describe('DontLeave', () => {
     jest.advanceTimersByTime(delay)
 
     document.dispatchEvent(new MouseEvent('mouseout', { relatedTarget: null }))
+
     document.dispatchEvent(new MouseEvent('mouseout', { relatedTarget: null }))
 
     expect(callback).toHaveBeenCalledTimes(1)
